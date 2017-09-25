@@ -220,7 +220,7 @@
 	<repositories>
 		<repository>
         <id>git-ornrocha</id>
-        <url>https://github.com/ornrocha/thirdparty/tree/master/mvn-repo</url>
+        <url>https://github.com/ornrocha/thirdparty/raw/master/mvn-repo</url>
         <snapshots>
             <enabled>true</enabled>
             <updatePolicy>always</updatePolicy>
