@@ -126,8 +126,8 @@
 			<version>1.8.1</version>
 		</dependency>
 		<dependency>
-			<groupId>com.github.ornrocha</groupId>
-			<artifactId>rsession</artifactId>
+			<groupId>com.github.yannrichet</groupId>
+			<artifactId>Rsession</artifactId>
 			<version>1.8.3.1</version>
 		</dependency>
 		<dependency>
@@ -219,9 +219,13 @@
 
 	<repositories>
 		<repository>
-			<id>jitpack.io</id>
-			<url>https://jitpack.io</url>
-		</repository>
+        <id>git-ornrocha</id>
+        <url>https://github.com/ornrocha/thirdparty/tree/master/mvn-repo</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+       </repository>
 	</repositories>
 
 </project>
