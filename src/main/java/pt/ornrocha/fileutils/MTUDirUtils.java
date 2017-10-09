@@ -126,7 +126,6 @@ public class MTUDirUtils {
 	   ArrayList<String> listoffiles=new ArrayList<>();
 	   File folder =new File(directory);
 	   File[] files=folder.listFiles();
-	   
 	   for (File file : files) {
 		   if(file.isFile()){
 			   listoffiles.add(file.getAbsolutePath());
@@ -149,6 +148,7 @@ public class MTUDirUtils {
     */
    
    public static ArrayList<String> getFilePathsInsideDirectory(String directory, boolean getfiles, boolean getfolders){
+	  
 	   ArrayList<String> listoffiles=new ArrayList<>();
 	   File folder =new File(directory);
 	   File[] files=folder.listFiles();

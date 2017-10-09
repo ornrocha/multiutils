@@ -86,6 +86,14 @@ public class DoubleTextField extends JTextField {
         }
     }
     
+    public double getDoubleValue() {
+    	if(getText().isEmpty())
+    		return 0;
+    	else {
+    		return Double.parseDouble(getText());
+    	}
+    }
+    
     public static void main(String[] args) {
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

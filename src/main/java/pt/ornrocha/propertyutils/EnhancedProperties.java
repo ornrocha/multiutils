@@ -142,14 +142,12 @@ public class EnhancedProperties extends Properties{
 		return inputkeyorder;
 	}
 	
-	public void store(Writer writer, boolean writecomments)
-	        throws IOException
-	    {
-	        store0((writer instanceof BufferedWriter)?(BufferedWriter)writer
-	                                                 : new BufferedWriter(writer),
-	               writecomments,
-	               false);
-	    }
+	public void store(Writer writer, boolean writecomments) throws IOException{
+		store0((writer instanceof BufferedWriter)?(BufferedWriter)writer
+				: new BufferedWriter(writer),
+				writecomments,
+				false);
+	}
 	
 	
 	 private void store0(BufferedWriter bw, boolean writecomments, boolean escUnicode)
@@ -295,7 +293,7 @@ public class EnhancedProperties extends Properties{
 			  case '\f':outBuffer.append('\\'); outBuffer.append('f');       
 			  break;
 			  case '=': // Fall through
-			  case ':': // Fall through
+			 // case ':': // Fall through
 			  case '#': // Fall through
 			  case '!':  
 				  outBuffer.append('\\'); outBuffer.append(aChar);   

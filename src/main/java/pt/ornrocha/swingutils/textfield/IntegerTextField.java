@@ -37,6 +37,14 @@ public class IntegerTextField extends JTextField {
     public IntegerTextField( int cols ) {
         super( cols );
     }
+    
+    
+    public int getIntegerValue() {
+    	if(getText().isEmpty())
+    		return 0;
+    	else
+    		return Integer.parseInt(getText());
+    }
 
     @Override
     protected Document createDefaultModel() {

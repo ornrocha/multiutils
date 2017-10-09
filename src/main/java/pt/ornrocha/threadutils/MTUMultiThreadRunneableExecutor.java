@@ -41,10 +41,10 @@ public class MTUMultiThreadRunneableExecutor implements ProcessShutdowner{
 		 
 			 executor.shutdown();
 		
-			 executor.awaitTermination(2, TimeUnit.MINUTES);
-		/* while (!executor.isTerminated()) {
-			Thread.sleep(1000);
-		 }*/
+			// executor.awaitTermination(5, TimeUnit.SECONDS);
+			while (!executor.isTerminated()) {
+				 Thread.sleep(1000);
+			 }
 		 
 	 }
 	 

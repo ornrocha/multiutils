@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>pt.ornrocha</groupId>
 	<artifactId>multiutils</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>multiutils</name>
 	<description>Support functions for development</description>
 
@@ -128,7 +128,7 @@
 		<dependency>
 			<groupId>com.github.yannrichet</groupId>
 			<artifactId>Rsession</artifactId>
-			<version>1.8.3.1</version>
+			<version>1.8.3.2</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.yannrichet</groupId>
@@ -215,9 +215,7 @@
 	</build>
 
 
-
-
-	<repositories>
+   <repositories>
 		<repository>
         <id>git-ornrocha</id>
         <url>https://github.com/ornrocha/thirdparty/raw/master/mvn-repo</url>
@@ -227,5 +225,13 @@
         </snapshots>
        </repository>
 	</repositories>
+
+
+	<distributionManagement>
+        <repository>
+            <id>bintray-ornrocha-mvn-repo</id>
+            <url>https://api.bintray.com/maven/ornrocha/mvn-repo/multiutils/;publish=1</url>
+        </repository>
+	</distributionManagement>
 
 </project>
