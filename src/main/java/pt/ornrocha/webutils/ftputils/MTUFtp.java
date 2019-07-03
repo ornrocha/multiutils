@@ -376,68 +376,6 @@ private boolean usepassivemode=true;
 	}
 	
 
-	public static void main(String[] args) throws IOException {
-		//ArrayList<String> l = ORIOFtp.connectToServer("ftp.ncbi.nlm.nih.gov").listAllFilesInDir("/geo/series/GSE41nnn/GSE41939/",false);
-       //System.out.println(l);
-		
-	/*	PropertyChangeSupport changelst = new PropertyChangeSupport(new MTUFtpUtils());
-		
-		PropertyChangeListener propChangeListn = new PropertyChangeListener() {
-
-			@Override
-
-			public void propertyChange(PropertyChangeEvent event) {
-
-			    String property = event.getPropertyName();
-
-			    if (property.equals(DownloadProgressPanel.CURRENTEFILEPROGRESS)) {
-                    System.out.println("Progress: "+(int)event.getNewValue());
-			    }
-			    else if(property.equals(DownloadProgressPanel.CURRENTEFILENAME)){
-			    	System.out.println("################## current file name: "+event.getNewValue()+"  ####################");
-			    }
-			  }
-	       };
-		changelst.addPropertyChangeListener(propChangeListn);
-		
-		
-		try {
-			MTUFtp.connectToServer("ftp.ncbi.nlm.nih.gov").downloadAllFilesOfDir("/geo/series/GSE41nnn/GSE41939/", "/home/orocha/TESTE_DOWNLOAD", true, changelst);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}*/
-		
-		
-	/*	FTPClient ftpc=new FTPClient();
-		
-		ftpc.connect("orochaserver.ddns.info", 130);
-		ftpc.login("ftpdata", "orocha1999");
-		//client.enterLocalActiveMode();
-		ftpc.setFileType(FTP.BINARY_FILE_TYPE);
-		//ftpc.enterLocalPassiveMode();
-		//ftpc.enterLocalActiveMode();
-		//ftpc.enterLocalActiveMode();
-		ftpc.setRemoteVerificationEnabled(false);
-		//ftpc.enterRemoteActiveMode(InetAddress.getByName("orochaserver.ddns.info"), 130);
-		FileInputStream fis =null;
-		boolean ok=false;
-		try{
-			fis = new FileInputStream("/home/orocha/Documentos/47.Mi_Fit_2.20_pt_PT_jaymeferreyra_fermateus.apk");
-			String filename=FilenameUtils.getName("/home/orocha/Documentos/47.Mi_Fit_2.20_pt_PT_jaymeferreyra_fermateus.apk");
-			ok=ftpc.storeFile(filename, fis);
-		} catch (IOException e) {
-			e.printStackTrace();
-		} */
-
-		
-		//boolean ok=MTUFtp.connectToServerWithLogin("orochaserver.ddns.info", "ftpdata", "orocha1999",130).disableRemoteVerification().sendFileToFtpServer("/home/orocha/Documentos/47.Mi_Fit_2.20_pt_PT_jaymeferreyra_fermateus.apk");
-		//boolean ok=MTUFtp.newinstance("/home/orocha/ftplogin").disableRemoteVerification().sendFileToFtpServer("/home/orocha/Documentos/47.Mi_Fit_2.20_pt_PT_jaymeferreyra_fermateus.apk");
-		//boolean ok=MTUFtp.newinstance("/home/orocha/ftplogin").disableRemoteVerification().sendFileToFtpServer("/home/orocha/Imagens/smplayer_screenshots/novo ficheiro.txt");
-		//boolean ok=MTUFtp.newinstance("/home/orocha/ftplogin").disableRemoteVerification().uploadFolderFilesToFTPServer("/home/orocha/Imagens/smplayer_screenshots");
-		boolean ok=MTUFtp.configureConnectionWithLogin("orochaserver.ddns.info", "ftpdata", "orocha1999",130).disableRemoteVerification().tryConnectionAnd().sendFileToFtpServer("/home/orocha/Documentos/47.Mi_Fit_2.20_pt_PT_jaymeferreyra_fermateus.apk");
-		System.out.println("Condition: "+ok);
-	}
+	
 
 }
